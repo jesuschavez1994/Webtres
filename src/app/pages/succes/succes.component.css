@@ -1,0 +1,10 @@
+h3{
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.succes{
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}

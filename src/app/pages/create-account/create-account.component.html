@@ -1,0 +1,65 @@
+<app-nav-baar [tag]="tag"></app-nav-baar>
+
+<div class="content wow fadeInUpBig">
+
+    <h3 class="pl-2 mb-4 mt-4">
+        Documento de identidad
+    </h3>
+    <p class="label pl-2 mb-2">Tipo de documento</p>
+
+    <form [formGroup]="forma" >
+        <div class="wrapper">
+            <input type="radio" name="select" id="option-1" checked>
+            <input type="radio" name="select" id="option-2">
+            <input type="radio" name="select" id="option-3">
+            <label for="option-1" class="option option-1">
+                <div class="dot"></div>
+                <span>Cédula</span>
+            </label>
+            <label for="option-2" class="option option-2">
+                <div class="dot"></div>
+                <span>Cédula de residencia</span>
+            </label>
+            <label for="option-3" class="option option-3">
+                <div class="dot"></div>
+                <span>Pasaporte</span>
+            </label>
+            <div class="form-group">
+                <label for="id"class='label'>N° de identificacion (sin guiones)</label>
+                <input 
+                    #number_identify
+                    type="text" 
+                    class="form-control" 
+                    id="id"  
+                    placeholder="Ejemplo: 0012510930088B"  
+                    formControlName="identify"
+                    [ngClass]="{'is-invalid':  (!forma.controls['identify'].valid)&& forma.controls['identify'].touched, 'is-valid': forma.controls['identify'].valid }" >
+            </div>
+            <div *ngIf="getErrorMessage('identify')">
+                <span class="invalid-input">Este campo es requerido</span>
+            </div>
+            <div *ngIf="err">
+                <span class="invalid-input"> {{mensaje}}</span>
+            </div>
+        </div>
+    </form>
+    
+    <div class="col-12  d-flex justify-content-center mt-5">
+        <a (click)="openDialog()"><strong>¿Por qué me solicitan esta información?</strong></a>
+    </div>
+
+    <div class="col-12 mt-5">
+        <div class="p-2 d-flex justify-content-center">
+            <button 
+                type="button" 
+                class="btn btn-dark" 
+                [routerLink]="['/succes']" 
+                [ngStyle]="{'width.%':  width}"
+                [disabled]="!this.forma.valid"
+                >
+                Continuar
+            </button>
+        </div>
+    </div>
+
+</div>

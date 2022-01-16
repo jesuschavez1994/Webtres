@@ -1,0 +1,24 @@
+.to-back{
+    background-image: url('../../../assets/navbar/Vector.svg') ;
+    background-position-y: center;
+    background-position-x: start;
+    background-repeat: no-repeat, repeat;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    background-color: Transparent;
+    color: #7C7C7C;
+    font-size: 14px;
+}
+
+.quote1{
+    width: 80px;
+    height: 4px;
+    background-color: #7C7C7C;
+}
+
+.quote2{
+    width: 80px;
+    height: 4px;
+    background-color:  #DDDDDD;
+}

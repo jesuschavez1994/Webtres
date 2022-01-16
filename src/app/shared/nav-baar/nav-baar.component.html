@@ -1,0 +1,23 @@
+<header>
+    <nav>
+        <div class="row">
+            <div class="col-6">
+                <button class="to-back" (click)="back()">
+                    Atras
+                </button>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-end pt-2">
+                <div class="">
+                    <div class="d-flex" *ngIf="!tag">
+                        <div class="quote1"></div>
+                        <div class="quote2"></div>
+                    </div>
+                    <div class="d-flex" *ngIf="tag">
+                        <div class="quote1"></div>
+                        <div class="quote1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
